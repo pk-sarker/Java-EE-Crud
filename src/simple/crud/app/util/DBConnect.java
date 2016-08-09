@@ -3,9 +3,10 @@
  */
 
 package simple.crud.app.util;
+
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Properties;
 import java.io.IOException;
 import java.io.InputStream;
@@ -34,6 +35,8 @@ public class DBConnect {
 			String url = dbProperties.getProperty("url");
 			String user = dbProperties.getProperty("user");
 			String password = dbProperties.getProperty("password");
+			Class.forName( driver );
+			connect = DriverManager.getConnection( url, user, password );
 		} catch(IOException e){
 			e.printStackTrace();
 		} catch(ClassNotFoundException e){
@@ -44,5 +47,15 @@ public class DBConnect {
 		return connect;
 	}
 	
+	public static void closeConnection(Connection currentConnection){
+		if(currentConnection == null){
+			return ;
+		}
+		try{
+			currentConnection.close();
+		} catch(SQLException e){
+			e.printStackTrace();
+		}
+	}
 
 }

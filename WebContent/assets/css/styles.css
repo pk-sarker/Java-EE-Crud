@@ -1,0 +1,169 @@
+
+.clearfix {
+    display:block;
+    *zoom: 1;
+}
+
+.clearfix:after {
+    content:".";
+    display:block;
+    clear:both;
+    visibility:hidden;
+    line-height:0;
+    height:0;
+}
+
+html[xmlns] .clearfix{
+    display: block;
+}
+
+* html .clearfix {
+    height:1%;
+}
+
+
+
+/* -------- Floating -------- */
+
+.fl-l{
+    float: left;
+}
+.fl-r{
+    float: right;
+}
+
+/* -------- Text Align -------- */
+.txt-l{
+    text-align: left;
+}
+.txt-r{
+    text-align: right;
+}
+
+.txt-c{
+    text-align: center !important;
+}
+
+/* ----- Font Size ----- */
+.font-13{
+    font-size: 13px !important;
+}
+.font-12{
+    font-size: 12px !important;
+}
+.font-14{
+    font-size: 14px !important;
+}
+.font-16{
+    font-size: 16px !important;
+}
+.font-18{
+    font-size: 18px !important;
+}
+
+/* ---- Margin ----- */
+.mr-t-3{
+    margin-top: 3px !important;
+}
+.mr-t-5{
+    margin-top: 5px !important;
+}
+
+/****  Width  *****/
+.wd-70p{
+    width: 70%;
+}
+.wd-85p{
+    width: 84.5%;
+}
+.wd-88pc{
+    width: 88% !important;
+}
+.wd-90p{
+    width: 89.5%;
+}
+.wd-100pc{
+    width: 99.9% !important;
+}
+.wd-25pc{
+    width: 25%;
+}
+.wd-27pc{
+    width: 27%;
+}
+.wd-30pc{
+    width: 30%;
+}
+
+.border-1{
+    border: 1px dotted #000000;
+}
+/* ----- Page Structure -----*/
+#wrapper, #header, #main-content, #footer{
+    width: 100%;
+}
+#header, #footer{
+    min-height: 50px;
+}
+#header{
+    font-size: 32px;
+    text-align: center;
+    padding-top: 20px;
+}
+#left-column{
+    width: 29%;
+    float: left;
+    min-height: 500px;
+}
+#right-column{
+    width: 70%;
+    float: left;
+    min-height: 500px;
+}
+#right-column #content{
+    padding: 0px 15px;
+    min-height: 300px;
+}
+
+
+/* ----- Message Box --------*/
+.message{
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.message.error{
+    color: #bd4643;
+    background-color: #f9e8e8;
+    border: 1px solid #ebccd1;
+}
+
+.message.success{
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+/* Heading */
+h3.title{
+    border-bottom: 3px solid #aaa;
+    padding-bottom: 10px;
+}
+
+.btn{
+    padding: 6px 25px;
+}
+
+.sql-error{
+    background: #fbe1e1;
+    padding: 10px 30px;
+    border: 1px solid #b70909;
+}
+.sql-error p{
+    margin: 5px 0px;
+}
+.sql-error p u{
+    text-decoration: underline;
+    color: red;
+}
