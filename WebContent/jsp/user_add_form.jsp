@@ -38,38 +38,44 @@
 </head>
 <body>
 	<div class="container">
-		<div class="row" id="header">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<h3>Header</h3>
-			</div>
-		</div>
+		<jsp:include page="top_nav.jsp" flush="true" />
 		<div class="row" id="main-body">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-						<h3>Left Column</h3>
-						<ul>
-						<%
-						Map<String, LinkMap> links = (HashMap<String, LinkMap>)application.getAttribute("leftLinks");
-						Iterator entries = links.entrySet().iterator();
-						//Iterator<String, LinkMap> iterator1 = links.iterator();
-						while (entries.hasNext()) {
-						    Map.Entry entry = (Map.Entry) entries.next();
-						    String key = (String)entry.getKey();
-						    LinkMap value = (LinkMap)entry.getValue();
-						    %> 
-						    <li>
-								<a href="<%=value.getLink()%>">
-									<span><%=value.getDisplayText()%></span>
-								</a>
-							</li>
-							<%
-						}
-						%>
-						</ul>
+						<nav class="navbar navbar-default">
+							<div class="container-fluid">
+								<h3>Left Column</h3>
+								<ul>
+								<%
+								Map<String, LinkMap> links = (HashMap<String, LinkMap>)application.getAttribute("leftLinks");
+								Iterator entries = links.entrySet().iterator();
+								//Iterator<String, LinkMap> iterator1 = links.iterator();
+								while (entries.hasNext()) {
+								    Map.Entry entry = (Map.Entry) entries.next();
+								    String key = (String)entry.getKey();
+								    LinkMap value = (LinkMap)entry.getValue();
+								    %> 
+								    <li>
+										<a href="<%=value.getLink()%>">
+											<span><%=value.getDisplayText()%></span>
+										</a>
+									</li>
+									<%
+								}
+								%>
+								</ul>		
+							</div>
+						</nav>
+						
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-9 col-lg-9">
-						<h3>Add new user</h3>
+						<nav class="navbar navbar-default">
+							<div class="container-fluid" style="min-height: 400px">
+								<h3>Add new user</h3>	
+							</div>
+						</nav>	
+						
 						
 					</div>
 				</div>

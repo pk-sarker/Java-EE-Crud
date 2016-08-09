@@ -83,7 +83,7 @@ public class BaseController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		String base = "/jsp/pages/";
+		String base = "/jsp/";
 		String url = base + "index.jsp";
 		String action = request.getParameter("action");
 		
